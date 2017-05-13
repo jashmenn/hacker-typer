@@ -5,7 +5,7 @@
   "description": "Fork of Hackertype for Atom",
   "keywords": [],
   "activationCommands": {
-    "atom-workspace": "hacker-typer:toggle"
+    "atom-workspace": "hacker-typist:start"
   },
   "repository": "https://github.com/jashmenn/hacker-typist",
   "license": "MIT",

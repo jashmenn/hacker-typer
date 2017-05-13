@@ -2,12 +2,12 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "Start hacker-typer",
-        "command": "hacker-typer:toggle"
+        "label": "Start hacker-typist",
+        "command": "hacker-typist:start"
       },
       {
-        "label": "Enable/Disable hacker-typer",
-        "command": "hacker-typer:end"
+        "label": "Disable hacker-typist",
+        "command": "hacker-typist:end"
       }
     ]
   },
@@ -16,15 +16,15 @@
       "label": "Packages",
       "submenu": [
         {
-          "label": "hacker-typer",
+          "label": "hacker-typist",
           "submenu": [
             {
               "label": "Start",
-              "command": "hacker-typer:toggle"
+              "command": "hacker-typist:start"
             },
             {
-              "label": "Enable/Disable",
-              "command": "hacker-typer:end"
+              "label": "Disable",
+              "command": "hacker-typist:end"
             }
           ]
         }

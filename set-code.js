@@ -19,20 +19,45 @@ let argv = yargs
 
 console.log(argv);
 
-var client = new net.Socket();
-client.connect(argv.port, argv.host, function() {
+let code = "";
+
+if (process.stdin.isTTY) {
   let filename = argv._[0];
-  console.log("Connected.");
-  console.log(`Sending ${filename}`);
-  let thisCode = fs.readFileSync(filename).toString();
-  client.write(thisCode);
-});
+  code = fs.readFileSync(filename).toString();
+  sendCode(code);
+} else {
+  // process.stdin.setEncoding(encoding);
+  process.stdin.on("readable", function() {
+    var chunk;
+    while ((chunk = process.stdin.read())) {
+      code += chunk;
+    }
+  });
 
-client.on("data", function(data) {
-  console.log("Received: " + data);
-  client.destroy(); // kill client after server's response
-});
+  process.stdin.on("end", function() {
+    // There will be a trailing \n from the user hitting enter. Get rid of it.
+    // data = data.replace(/\n$/, "");
+    // processData();
+    sendCode(code);
+  });
+}
 
-client.on("close", function() {
-  console.log("Connection closed");
-});
+function sendCode(code) {
+  var client = new net.Socket();
+
+  client.connect(argv.port, argv.host, function() {
+    let filename = argv._[0];
+    console.log("Connected.");
+    console.log(code);
+    client.write(code);
+  });
+
+  client.on("data", function(data) {
+    console.log("Received: " + data);
+    client.destroy(); // kill client after server's response
+  });
+
+  client.on("close", function() {
+    console.log("Connection closed");
+  });
+}

@@ -1,6 +1,6 @@
 {
   "atom-workspace": {
-    "ctrl-alt-s": "hacker-typer:toggle",
-    "ctrl-alt-e": "hacker-typer:end"
+    "ctrl-alt-s": "hacker-typist:start",
+    "ctrl-alt-e": "hacker-typist:end"
   }
 }
