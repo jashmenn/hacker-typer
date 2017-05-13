@@ -1,12 +1,13 @@
 {
   "name": "hacker-typist",
-  "main": "./lib/hacker-typer",
+  "main": "./lib/hacker-typist",
   "version": "0.4.0",
   "description": "Fork of Hackertype for Atom",
   "keywords": [],
   "activationCommands": {
     "atom-workspace": "hacker-typist:start"
   },
+  "bin": "./bin/ht-set-code.js",
   "repository": "https://github.com/jashmenn/hacker-typist",
   "license": "MIT",
   "engines": {
