@@ -26,7 +26,6 @@ if (process.stdin.isTTY) {
   code = fs.readFileSync(filename).toString();
   sendCode(code);
 } else {
-  // process.stdin.setEncoding(encoding);
   process.stdin.on("readable", function() {
     var chunk;
     while ((chunk = process.stdin.read())) {
@@ -35,9 +34,6 @@ if (process.stdin.isTTY) {
   });
 
   process.stdin.on("end", function() {
-    // There will be a trailing \n from the user hitting enter. Get rid of it.
-    // data = data.replace(/\n$/, "");
-    // processData();
     sendCode(code);
   });
 }
