@@ -1,6 +1,7 @@
 {
   "atom-workspace": {
-    "ctrl-alt-s": "hacker-typist:start",
+    "ctrl-alt-s": "hacker-typist:server",
+    "ctrl-alt-p": "hacker-typist:paste",
     "ctrl-alt-e": "hacker-typist:end"
   }
 }

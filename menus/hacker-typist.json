@@ -2,8 +2,12 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "Start hacker-typist",
-        "command": "hacker-typist:start"
+        "label": "Server hacker-typist",
+        "command": "hacker-typist:server"
+      },
+            {
+        "label": "Paste hacker-typist",
+        "command": "hacker-typist:paste"
       },
       {
         "label": "Disable hacker-typist",
@@ -19,8 +23,12 @@
           "label": "hacker-typist",
           "submenu": [
             {
-              "label": "Start",
-              "command": "hacker-typist:start"
+              "label": "Server",
+              "command": "hacker-typist:server"
+            },
+            {
+              "label": "Paste",
+              "command": "hacker-typist:paste"
             },
             {
               "label": "Disable",
