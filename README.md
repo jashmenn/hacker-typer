@@ -6,11 +6,15 @@ It works by "pasting" the code you want from your clipboard and then that code i
 
 It inserts code character by character into atom and so all of your existing plugins will run such as autopair.
 
+## Motivation
+
+This package was written because when I was recording screencasts and I kept making typos. With Hacker Typist, I'm able to copy prepared code from another file, and then "type" it in without mistakes.
+
 ## How to use:
 
 1. Open a file in Atom.
 2. Copy some code to your clipboard
-3. Press ctrl + alt + p to _paste the code into Hacker Typist_.
+3. Press ctrl + alt + p to _paste the code into Hacker Typist_ .
 4. Type like a child
 5. Hit `esc` when you're finished
 
