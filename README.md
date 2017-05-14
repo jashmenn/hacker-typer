@@ -12,6 +12,15 @@ When enabled, it starts a server which listens for code input. It comes with a t
 4. Return to new file, type like a child
 5. Press ctrl + alt + e to end
 
+## Developing
+
+```
+git clone <repo>
+cd hacker-typist
+npm install
+apm link
+```
+
 ## Contributors
 
 Forked from zamarrowski's [hacker-typer](https://github.com/zamarrowski/hacker-typer)
